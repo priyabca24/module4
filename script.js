@@ -1,20 +1,15 @@
-
 (function () {
+  var names = ["Creepy", "John", "Jess", "Juno", "Priya", "Farhan", "Lata", "Pooja", "Liam", "Javed"];
 
-var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
+  for (var i = 0; i < names.length; i++) {
+    var firstChar = names[i].charAt(0).toLowerCase();
 
-
-for (var i = 0; i < names.length; i++) {
-
-
-  var firstLetter = names[i].charAt(0).toLowerCase();
-
-
-  if (firstLetter === 'j') {
-    byeSpeaker.speak(names[i]);
-  } else {
-    helloSpeaker.speak(names[i]);
+    if (firstChar === 'j') {
+      byeSpeaker.sayBye(names[i]); // Custom method name
+    } else {
+      helloSpeaker.sayHello(names[i]); // Custom method name
+    }
   }
-}
 
+  console.log("All greetings done!");
 })();
