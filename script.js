@@ -1,4 +1,4 @@
-// Wrapped everything in an IIFE so no leaks 🌊
+
 (function () {
   const listOfNames = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
 
