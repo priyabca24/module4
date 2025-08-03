@@ -1,12 +1,13 @@
+// (Hello) speaker object in a private scope
+(function (global) {
+  const greetingSpeaker = {};
 
-(function (window) {
-  var helloSpeaker = {};
+  const helloMsg = "Hey there";
 
-  var greeting = "Hey there";
-
-  helloSpeaker.sayHello = function (name) {
-    console.log(greeting + ", " + name + "!");
+  greetingSpeaker.sayHi = function (personName) {
+    console.log(helloMsg + " " + personName);
   };
 
-  window.helloSpeaker = helloSpeaker;
+  // Expose it globally
+  global.greetingSpeaker = greetingSpeaker;
 })(window);
