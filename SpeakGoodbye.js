@@ -1,11 +1,13 @@
-(function (window) {
-  var byeSpeaker = {};
+// (Goodbye) speaker object in a private scope
+(function (global) {
+  const farewellSpeaker = {};
 
-  var farewell = "See ya";
+  const byeMsg = "Later";
 
-  byeSpeaker.sayBye = function (name) {
-    console.log(farewell + ", " + name + "!");
+  farewellSpeaker.sayBye = function (personName) {
+    console.log(byeMsg + " " + personName);
   };
 
-  window.byeSpeaker = byeSpeaker;
+  // Attach it to the window so other files can use it
+  global.farewellSpeaker = farewellSpeaker;
 })(window);
