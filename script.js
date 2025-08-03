@@ -1,15 +1,17 @@
+// Wrapped everything in an IIFE so no leaks 🌊
 (function () {
-  var names = ["Creepy", "John", "Jess", "Juno", "Priya", "Farhan", "Lata", "Pooja", "Liam", "Javed"];
+  const listOfNames = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
 
-  for (var i = 0; i < names.length; i++) {
-    var firstChar = names[i].charAt(0).toLowerCase();
+  // Loop through each name and decide how to greet
+  for (let i = 0; i < listOfNames.length; i++) {
+    const currentName = listOfNames[i];
+    const firstChar = currentName.charAt(0).toLowerCase();
 
+    // If the name starts with 'j', say goodbye — else hello
     if (firstChar === 'j') {
-      byeSpeaker.sayBye(names[i]); // Custom method name
+      farewellSpeaker.sayBye(currentName);
     } else {
-      helloSpeaker.sayHello(names[i]); // Custom method name
+      greetingSpeaker.sayHi(currentName);
     }
   }
-
-  console.log("All greetings done!");
 })();
